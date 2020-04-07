@@ -1,0 +1,18 @@
+def MaxSubArray(str1):
+    arr1=[int(n) for n in str1.split()]
+    sum1=0
+    max1=0
+    i=0
+    n=len(arr1)
+    while i<n:
+        if sum1>0:
+            sum1=sum1+arr1[i]
+        else:
+            sum1=arr1[i]
+        if sum1>max1:
+            max1=sum1
+        i=i+1
+    return max1
+str1=input()
+max1=MaxSubArray(str1)
+print(max1)
